@@ -19,8 +19,8 @@ class DataVisualiser( octoprint.plugin.StartupPlugin,
     #def on_event(Startup): #Event should become "PrintStarted"
     #    while True:
 
-__plugin_name__ = "Particulate matter measurement"
+__plugin_name__ = "Data visualiser"
 __plugin_version__ = "1.0.0"
-__plugin_description__ = "SDS011 sensor setup and visualisation in tab"
+__plugin_description__ = "Multiple types of data can be visualised using this plugin"
 __plugin_pythoncompat__ = ">=3.7,<4"
 __plugin_implementation__ = DataVisualiser()
