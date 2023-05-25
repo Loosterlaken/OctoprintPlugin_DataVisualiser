@@ -1,6 +1,6 @@
 plugin_identifier = "Data_visualiser"
 plugin_package = "octoprint_data_visualiser"
-plugin_name = "OctoPrint-datap-visualiser"
+plugin_name = "OctoPrint-data-visualiser"
 plugin_version = "0.0.1"
 plugin_description = """A plugin that visualises your data"""
 plugin_author = "Luuk Oosterlaken"
