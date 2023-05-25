@@ -5,7 +5,7 @@ class DataVisualiser( octoprint.plugin.StartupPlugin,
                             octoprint.plugin.TemplatePlugin):
     def get_template_configs(self):
         return [
-            dict(type="tab", name="Graph", template="myplugin_first_tab.jinja2", custom_bindings=True)
+            dict(type="tab", name="Graph", template="Github_example1.jinja2", custom_bindings=True)
         ]
     
     def on_after_startup(self):
