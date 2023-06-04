@@ -6,6 +6,7 @@ plugin_author = "Luuk Oosterlaken"
 plugin_author_email = "Luuk.oosterlaken@hotmail.com"
 plugin_url = "https://github.com/Loosterlaken/OctoprintPlugin_DataVisualiser.git"
 plugin_license = "MIT"
+plugin_identifier = "data_visualiser"
 plugin_requires = [
 	"psutil"
 ]
