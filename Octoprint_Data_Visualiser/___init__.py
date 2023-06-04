@@ -5,14 +5,16 @@ class DataVisualiser( octoprint.plugin.StartupPlugin,
                             octoprint.plugin.TemplatePlugin):
     def get_template_configs(self):
         return [
-            dict(type="tab", name="Graph", template="Github_example1.jinja2", custom_bindings=True)
+            dict(type="tab", name="Graph", template="Github_example2.jinja2", custom_bindings=True)
         ]
     
     def on_after_startup(self):
-        # data  opslag locatie
-        #log = open("d:\Log.txt","a")
-        while True:
-            self._logger.info("Hij doet nu iets")
+        # Voeg hier je eigen logica toe voor het verzamelen en verwerken van gegevens
+        
+        # Laad de sjabloon en render deze met de gegevens
+        rendered_template = self._plugin_manager.get_template("Github_example2.jinja2").render(
+            # Voeg hier je eigen gegevens toe om door te geven aan de sjabloon
+        )
 
     
     
