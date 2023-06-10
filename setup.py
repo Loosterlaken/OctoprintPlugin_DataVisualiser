@@ -15,50 +15,36 @@ plugin_additional_packages = []
 plugin_ignored_packages = []
 additional_setup_parameters = {}
 
-try:
-    import octoprint_setuptools
+from setuptools import setup
 
+try:
+	import octoprint_setuptools
 except:
 	print("Could not import OctoPrint's setuptools, are you sure you are running that under "
-	      "the same python installation that OctoPrint is installed under?")
+							"the same python installation that OctoPrint is installed under?")
 	import sys
+
 	sys.exit(-1)
 
-if len(additional_setup_parameters):
-    from octoprint.util import dict_merge
-    setup_parameters = dict_merge(setup_parameters, additional_setup_parameters)
-      
-
-setup(
-    name=plugin_identifier,
-    version=plugin_version,
-    packages=[plugin_package],
-    url=plugin_url,
-    license=plugin_license,
-    author=plugin_author,
-    author_email=plugin_author_email,
-    description=plugin_description,
-    install_requires=[
-        "octoprint"
-    ],
-    classifiers=[
-        "Development Status :: 4 - Beta",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-        "Framework :: OctoPrint",
-        "Environment :: Plugins",
-    ],
-    entry_points={
-        "octoprint.plugin": [
-            "myplugin = myplugin"
-        ]
-    }
+setup_parameters = octoprint_setuptools.create_plugin_setup_parameters(
+	identifier=plugin_identifier,
+	package=plugin_package,
+	name=plugin_name,
+	version=plugin_version,
+	description=plugin_description,
+	author=plugin_author,
+	mail=plugin_author_email,
+	url=plugin_url,
+	license=plugin_license,
+	#requires=plugin_requires,
+	additional_packages=plugin_additional_packages,
+	ignored_packages=plugin_ignored_packages,
+	additional_data=plugin_additional_data
 )
+
+if len(additional_setup_parameters):
+	from octoprint.util import dict_merge
+
+	setup_parameters = dict_merge(setup_parameters, additional_setup_parameters)
+
+setup(**setup_parameters)
