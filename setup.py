@@ -1,12 +1,12 @@
 from setuptools import setup
 
-plugin_identifier = "myplugin"
+plugin_identifier = "data_visualiser"
 plugin_package = "Octoprint_Data_Visualiser"
-plugin_name = "My Plugin"
+plugin_name = "OctoPrint-Data-Visualiser"
 plugin_version = "1.0.0"
-plugin_description = "A description of my plugin."
-plugin_author = "Your Name"
-plugin_author_email = "your.email@example.com"
+plugin_description = "Multiple types of data can be visualised using this plugin"
+plugin_author = "Luuk Oosterlaken"
+plugin_author_email = "Luuk.oosterlaken@hotmail.com"
 plugin_url = "https://github.com/Loosterlaken/OctoprintPlugin_DataVisualiser.git"
 plugin_license = "MIT"
 
