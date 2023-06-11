@@ -3,7 +3,7 @@ import octoprint_setuptools
 
 plugin_identifier = "data_visualiser"
 plugin_package = "Octoprint_Data_Visualiser"
-plugin_name = "OctoPrint-Data-Visualiser"
+plugin_name = "Octoprint-Data-Visualiser"
 plugin_version = "1.0.0"
 plugin_description = "Multiple types of data can be visualised using this plugin"
 plugin_author = "Luuk Oosterlaken"
