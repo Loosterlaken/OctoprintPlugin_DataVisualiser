@@ -1,10 +1,10 @@
 from setuptools import setup
 import octoprint_setuptools
 
-plugin_identifier = "data_visualiser"
+plugin_identifier = "Data_visualiser"
 plugin_package = "Octoprint_Data_Visualiser"
 plugin_name = "Octoprint-Data-Visualiser"
-plugin_version = "1.0.0"
+plugin_version = "1.0.1"
 plugin_description = "Multiple types of data can be visualised using this plugin"
 plugin_author = "Luuk Oosterlaken"
 plugin_author_email = "Luuk.oosterlaken@hotmail.com"
